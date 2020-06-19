@@ -6,7 +6,7 @@ module.exports = {
         host: '127.0.0.1',
         user: 'root',
         password: 'root',
-        database: 'agenda',
+        database: 'jobfinder',
     },
     migrations: {
         directory: path.resolve(__dirname, 'src', 'database', 'migrations'),

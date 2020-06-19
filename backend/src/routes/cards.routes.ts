@@ -22,12 +22,12 @@ cardsRouter.get('/', async (request, response) => {
 cardsRouter.post('/', async (request, response) => {
     try {
         const { title, description } = request.body;
-        const userID = request.headers.authorization;
+        const companyID = request.headers.authorization;
 
         const card = await cardController.create({
             title,
             description,
-            userID,
+            companyID,
         });
 
         return response.json(card);

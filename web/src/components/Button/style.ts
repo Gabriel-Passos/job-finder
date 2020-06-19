@@ -2,12 +2,12 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.button`
-  width: 400px;
+  width: 300px;
   font-weight: 700;
   padding: 16px;
   border: 0;
   border-radius: 5px;
-  background-color: #f09526;
+  background-color: #4991d2;
   color: #fff;
   transition: background-color 0.2s;
 
@@ -16,6 +16,6 @@ export const Container = styled.button`
   }
 
   &:hover {
-    background-color: ${shade(0.1, '#f09526')};
+    background-color: ${shade(0.2, '#4991d2')};
   }
 `;

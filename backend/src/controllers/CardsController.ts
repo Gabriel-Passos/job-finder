@@ -3,7 +3,7 @@ import knex from '../database/connection';
 interface Card {
     title: string;
     description: string;
-    userID: string | undefined;
+    companyID?: string;
 }
 
 interface Page {
@@ -13,25 +13,31 @@ interface Page {
 class CardsController {
     public async index({ page }: Page): Promise<Card[]> {
         const cards = await knex('cards')
-            .join('users', 'users.id', '=', 'cards.userID')
+            .join('companies', 'companies.id', '=', 'cards.companyID')
             .limit(5)
             .offset((page - 1) * 5)
             .select([
                 'cards.*',
-                'users.name',
-                'users.numberPhone',
-                'users.email',
-                'users.city',
+                'companies.name',
+                'companies.cnpj',
+                'companies.numberPhone',
+                'companies.email',
+                'companies.city',
+                'companies.uf',
             ]);
 
         return cards;
     }
 
-    public async create({ title, description, userID }: Card): Promise<Card> {
+    public async create({
+        title,
+        description,
+        companyID,
+    }: Card): Promise<Card> {
         const card = {
             title,
             description,
-            userID,
+            companyID,
         };
 
         await knex('cards').insert(card);

@@ -6,9 +6,9 @@ export async function up(knex: Knex): Promise<void> {
         table.string('title').notNullable();
         table.string('description').notNullable();
 
-        table.string('userID').notNullable();
+        table.string('companyID').notNullable();
 
-        table.foreign('userID').references('id').inTable('users');
+        table.foreign('companyID').references('id').inTable('companies');
     });
 }
 

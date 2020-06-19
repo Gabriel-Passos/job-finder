@@ -1,28 +1,28 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-import background from '../../assets/background.png';
+import background from '../../assets/background.jpg';
 
 export const Container = styled.div`
   height: 100vh;
 
   display: flex;
   align-items: stretch;
-  justify-content: space-around;
 `;
 
 export const Content = styled.div`
   display: flex;
+  align-items: flex-start;
   flex-direction: column;
-  align-items: center;
 
   width: 100%;
-  max-width: 750px;
+  max-width: 500px;
 
   margin: auto 0;
+  padding-left: 60px;
 
   h1 {
-    font-size: 42px;
+    font-size: 48px;
     color: #444;
   }
 
@@ -32,8 +32,6 @@ export const Content = styled.div`
 
   div {
     display: flex;
-    align-items: center;
-    justify-content: center;
     flex-direction: column;
 
     margin-top: 30%;
@@ -46,7 +44,7 @@ export const Content = styled.div`
       font-size: 18px;
 
       &:hover {
-        color: #f09526;
+        color: #3c4f77;
       }
 
       svg {
@@ -59,7 +57,5 @@ export const Content = styled.div`
 export const Background = styled.div`
   flex: 1;
   background: url(${background}) no-repeat center;
-  background-size: contain;
-  max-width: 1000px;
-  height: auto;
+  background-size: cover;
 `;

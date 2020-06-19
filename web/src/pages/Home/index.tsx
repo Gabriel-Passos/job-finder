@@ -15,14 +15,14 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Content>
-        <h1>APP TODO</h1>
-        <p>Liste suas tarefas de maneira clara e objetiva.</p>
+        <h1>Job Finder</h1>
+        <p>Encontre as melhores vagas para desenvolvedores.</p>
         <div>
           <Button type="button" onClick={handleListTODO}>
-            Ver lista de TODO
+            Ver vagas
           </Button>
           <Link to="/register">
-            Cadastrar usuário
+            Divulgar vaga
             <FiLogIn size={20} />
           </Link>
         </div>

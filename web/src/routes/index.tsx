@@ -2,19 +2,19 @@ import React from 'react';
 import { Switch, Route } from 'react-router-dom';
 
 import Home from '../pages/Home';
-import User from '../pages/User';
+import Company from '../pages/Company';
 import Cards from '../pages/Cards';
-import RegisterUser from '../pages/RegisterUser';
+import RegisterCompany from '../pages/RegisterCompany';
 import Dashboard from '../pages/Dashboard';
 
 const Routes: React.FC = () => {
   return (
     <Switch>
       <Route path="/" exact component={Home} />
-      <Route path="/user" exact component={User} />
-      <Route path="/cards" exact component={Cards} />
-      <Route path="/register" exact component={RegisterUser} />
-      <Route path="/dashboard" exact component={Dashboard} />
+      <Route path="/company" component={Company} />
+      <Route path="/cards" component={Cards} />
+      <Route path="/register" component={RegisterCompany} />
+      <Route path="/dashboard" component={Dashboard} />
     </Switch>
   );
 };
