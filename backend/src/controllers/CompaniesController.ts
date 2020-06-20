@@ -5,11 +5,9 @@ import knex from '../database/connection';
 interface Company {
     name: string;
     cnpj: string;
-    numberPhone: string;
     email: string;
     password: string;
-    city: string;
-    uf: string;
+    companySize: string;
 }
 
 class CompaniesController {
@@ -18,10 +16,8 @@ class CompaniesController {
             'id',
             'name',
             'cnpj',
-            'numberPhone',
             'email',
-            'city',
-            'uf',
+            'companySize',
         );
 
         return companies;
@@ -30,21 +26,17 @@ class CompaniesController {
     public async create({
         name,
         cnpj,
-        numberPhone,
         email,
         password,
-        city,
-        uf,
+        companySize,
     }: Company): Promise<Company> {
         const company = {
             id: uuid(),
             name,
             cnpj,
-            numberPhone,
             email,
             password,
-            city,
-            uf,
+            companySize,
         };
 
         await knex('companies').insert(company);

@@ -44,6 +44,22 @@ export const Form = styled.form`
     }
   }
 
+  select {
+    margin-top: 10px;
+    width: 300px;
+    padding: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+
+    font-size: 16px;
+
+    color: #444;
+
+    option {
+      font-size: 20px;
+    }
+  }
+
   div {
     input {
       width: 230px;

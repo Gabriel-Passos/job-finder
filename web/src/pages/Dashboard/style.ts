@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import { shade } from 'polished';
 
 export const Container = styled.div`
   height: 100vh;
@@ -8,7 +9,7 @@ export const Container = styled.div`
   align-items: center;
 
   margin: 60px auto 0 auto;
-  padding: 10px;
+  padding: 20px;
 
   h1 {
     font-size: 48px;
@@ -40,8 +41,12 @@ export const Form = styled.form`
 
 export const Content = styled.div`
   margin-top: 70px;
+  margin-bottom: 50px;
 
   display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+
   width: 100%;
   max-width: 960px;
 `;
@@ -67,9 +72,14 @@ export const Filter = styled.div`
       border: 1px solid #ccc;
       border-radius: 5px;
       color: #444;
+      background-color: #efefef;
 
       & + button {
         margin-top: 5px;
+      }
+
+      &:hover {
+        background-color: ${shade(0.1, '#efefef')};
       }
     }
   }
@@ -79,20 +89,71 @@ export const Jobs = styled.div`
   width: 700px;
   margin-left: 20px;
 
+  transform: translateX(10px);
+
   a {
     margin: 5px 0 10px 0;
 
     display: flex;
-    align-items: center;
-    justify-content: space-between;
+    flex-direction: column;
 
     padding: 25px;
     background-color: #fff;
+    color: #3c4f77;
     border: 0;
     border-radius: 5px;
 
+    transition: transform 0.2s;
+
+    div {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      margin-bottom: 20px;
+    }
+
     p {
       font-weight: 300;
+    }
+
+    &:hover {
+      transform: translateX(8px);
+    }
+  }
+`;
+
+export const JobDetails = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    display: flex;
+    align-items: center;
+
+    svg {
+      margin-right: 5px;
+    }
+  }
+`;
+
+export const Techs = styled.div`
+  margin-top: 10px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  p {
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    border: 0;
+    border-radius: 10px;
+    background-color: #ccc;
+
+    svg {
+      margin-right: 5px;
     }
   }
 `;

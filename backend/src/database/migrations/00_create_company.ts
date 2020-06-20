@@ -5,11 +5,9 @@ export async function up(knex: Knex): Promise<void> {
         table.string('id').primary();
         table.string('name').notNullable();
         table.string('cnpj').notNullable();
-        table.string('numberPhone').notNullable();
         table.string('email').unique().notNullable();
         table.string('password').notNullable();
-        table.string('city').notNullable();
-        table.string('uf').notNullable();
+        table.string('companySize').notNullable();
     });
 }
 

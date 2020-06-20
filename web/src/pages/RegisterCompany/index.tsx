@@ -9,11 +9,9 @@ import api from '../../services/api';
 const RegisterCompany: React.FC = () => {
   const [name, setName] = useState('');
   const [cnpj, setCNPJ] = useState('');
-  const [numberPhone, setNumberPhone] = useState('');
   const [email, setEmail] = useState('');
   const [password, setPassword] = useState('');
-  const [city, setCity] = useState('');
-  const [uf, setUF] = useState('');
+  const [companySize, setcompanySize] = useState('');
 
   const history = useHistory();
 
@@ -24,11 +22,9 @@ const RegisterCompany: React.FC = () => {
       await api.post('/companies', {
         name,
         cnpj,
-        numberPhone,
         email,
         password,
-        city,
-        uf,
+        companySize,
       });
       history.push('/company');
     } catch (err) {
@@ -53,12 +49,6 @@ const RegisterCompany: React.FC = () => {
           onChange={event => setCNPJ(event.target.value)}
         />
         <input
-          type="text"
-          placeholder="Número de Telefone"
-          value={numberPhone}
-          onChange={event => setNumberPhone(event.target.value)}
-        />
-        <input
           type="email"
           placeholder="E-mail"
           value={email}
@@ -70,20 +60,15 @@ const RegisterCompany: React.FC = () => {
           value={password}
           onChange={event => setPassword(event.target.value)}
         />
-        <div>
-          <input
-            type="text"
-            placeholder="Cidade"
-            value={city}
-            onChange={event => setCity(event.target.value)}
-          />
-          <input
-            type="text"
-            placeholder="UF"
-            value={uf}
-            onChange={event => setUF(event.target.value)}
-          />
-        </div>
+        <select
+          name="company-size"
+          onChange={event => setcompanySize(event.target.value)}
+        >
+          <option value="startup">Startup</option>
+          <option value="small-medium-company">Pequena ou Média empresa</option>
+          <option value="big-company">Grande empresa</option>
+          <option value="multinational">Multinacional</option>
+        </select>
         <Button type="submit">Cadastrar</Button>
       </Form>
     </Container>

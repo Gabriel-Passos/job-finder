@@ -13,24 +13,14 @@ companiesRouter.get('/', async (request, response) => {
 
 companiesRouter.post('/', async (request, response) => {
     try {
-        const {
-            name,
-            cnpj,
-            numberPhone,
-            email,
-            password,
-            city,
-            uf,
-        } = request.body;
+        const { name, cnpj, email, password, companySize } = request.body;
 
         const company = await companyController.create({
             name,
             cnpj,
-            numberPhone,
             email,
             password,
-            city,
-            uf,
+            companySize,
         });
 
         return response.json(company);

@@ -1,10 +1,40 @@
-import React from 'react';
-import { FiChevronRight, FiSearch } from 'react-icons/fi';
+import React, { useState, useEffect } from 'react';
+import { FiSearch, FiDollarSign, FiMapPin } from 'react-icons/fi';
+import { FaBuilding, FaChartBar } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 
-import { Container, Form, Content, Jobs, Filter } from './style';
+import {
+  Container,
+  Form,
+  Content,
+  Jobs,
+  Filter,
+  JobDetails,
+  Techs,
+} from './style';
+
+import api from '../../services/api';
+
+interface Job {
+  id: number;
+  title: string;
+  name: string;
+  experienceLevel: string;
+  contract: string;
+  salary: string;
+  location: string;
+  companySize: string;
+}
 
 const Dashboard: React.FC = () => {
+  const [jobs, setJobs] = useState<Job[]>([]);
+
+  useEffect(() => {
+    api.get('/job-details').then(response => {
+      setJobs(response.data);
+    });
+  }, []);
+
   return (
     <Container>
       <h1>Job Finder</h1>
@@ -41,78 +71,42 @@ const Dashboard: React.FC = () => {
           </div>
         </Filter>
         <Jobs>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
-          <hr />
-          <Link to="/">
-            <strong>Nome da empresa</strong>
-            <p>Título da vaga</p>
-            <FiChevronRight size={20} />
-          </Link>
+          {jobs.map(job => (
+            <div key={job.id}>
+              <hr />
+              <Link to="/job-details">
+                <div>
+                  <strong>{job.name}</strong>
+                  <h2>{job.title}</h2>
+                  <div />
+                </div>
+                <JobDetails>
+                  <p>
+                    <FaBuilding size={20} />
+                    {job.companySize}
+                  </p>
+                  <p>
+                    <FiDollarSign size={20} />
+                    R${job.salary}
+                  </p>
+                  <p>
+                    <FaChartBar size={20} />
+                    {job.experienceLevel}
+                  </p>
+                  <p>
+                    <FiMapPin size={20} />
+                    {job.location}
+                  </p>
+                </JobDetails>
+                <Techs>
+                  <p>JavaScript</p>
+                  <p>NodeJS</p>
+                  <p>ReactJs</p>
+                  <p>React Native</p>
+                </Techs>
+              </Link>
+            </div>
+          ))}
         </Jobs>
       </Content>
     </Container>
