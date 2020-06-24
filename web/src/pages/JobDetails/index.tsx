@@ -1,6 +1,7 @@
 import React from 'react';
+import { useHistory } from 'react-router-dom';
 
-import { FiMail } from 'react-icons/fi';
+import { FiMail, FiChevronLeft } from 'react-icons/fi';
 
 import {
   Container,
@@ -9,24 +10,37 @@ import {
   Description,
   Requirements,
   Contact,
+  Header,
 } from './style';
 
 import Button from '../../components/Button';
 
 const JobDetails: React.FC = () => {
+  const history = useHistory();
+
+  function handleBack(): void {
+    history.goBack();
+  }
+
   return (
     <Container>
-      <h1>Job Finder</h1>
+      <Header>
+        <button type="button" onClick={handleBack}>
+          <FiChevronLeft size={20} />
+        </button>
+        <h1>Job Finder</h1>
+        <div />
+      </Header>
       <hr />
       <h2>Título da vaga</h2>
       <Content>
         <Details>
           <div>
-            <strong>Empresa: </strong>
+            <strong>Empresa:</strong>
             <p>Riot Games</p>
           </div>
           <div>
-            <strong>Tamanho da empresa </strong>
+            <strong>Tamanho da empresa:</strong>
             <p>Multinacional</p>
           </div>
           <div>

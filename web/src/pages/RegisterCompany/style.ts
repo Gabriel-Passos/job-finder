@@ -30,13 +30,13 @@ export const Form = styled.form`
   flex-direction: column;
 
   input {
-    width: 300px;
+    width: 450px;
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
 
     & + input {
-      margin-top: 10px;
+      margin-top: 8px;
     }
 
     ::placeholder {
@@ -46,7 +46,7 @@ export const Form = styled.form`
 
   select {
     margin-top: 10px;
-    width: 300px;
+    width: 450px;
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
@@ -72,5 +72,6 @@ export const Form = styled.form`
 
   button {
     margin-top: 20px;
+    width: 450px;
   }
 `;
