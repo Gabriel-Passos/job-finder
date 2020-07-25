@@ -3,7 +3,7 @@ import { shade } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
-  max-width: 860px;
+  max-width: 960px;
   height: 100vh;
 
   display: flex;
@@ -15,18 +15,18 @@ export const Container = styled.div`
   h1 {
     text-align: center;
     font-size: 48px;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 
   h2 {
     margin: 60px 0 30px 0;
     text-align: center;
     font-size: 28px;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 `;
 
-export const Header = styled.header`
+export const HeaderDetails = styled.header`
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,7 +35,7 @@ export const Header = styled.header`
     border: 0;
     background-color: transparent;
     svg {
-      color: #fff;
+      color: ${props => props.theme.colors.text};
     }
   }
 `;
@@ -58,11 +58,11 @@ export const Details = styled.div`
 
     strong {
       margin-right: 10px;
-      color: ${shade(0.2, '#efefef')};
+      color: ${props => shade(0.2, props.theme.colors.text)};
     }
 
     p {
-      color: ${shade(0.1, '#efefef')};
+      color: ${props => shade(0.2, props.theme.colors.text)};
     }
   }
 `;
@@ -70,18 +70,18 @@ export const Details = styled.div`
 export const Description = styled.div`
   margin-top: 16px;
 
-  background-color: #ccc;
+  background-color: ${props => shade(0.2, props.theme.colors.background)};
   padding: 8px;
 
   border: 0;
   border-radius: 5px;
 
   h3 {
-    color: #444;
+    color: ${props => props.theme.colors.text};
   }
 
   p {
-    color: #444;
+    color: ${props => props.theme.colors.text};
     margin-top: 8px;
     text-align: justify;
   }
@@ -91,7 +91,7 @@ export const Requirements = styled.div`
   margin-top: 16px;
 
   h3 {
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 
   div {
@@ -104,8 +104,8 @@ export const Requirements = styled.div`
       margin-top: 8px;
       text-align: justify;
 
-      background-color: #ccc;
-      color: #444;
+      background-color: ${props => shade(0.2, props.theme.colors.background)};
+      color: ${props => props.theme.colors.text};
       padding: 8px;
       border: 0;
       border-radius: 5px;
@@ -119,12 +119,12 @@ export const Requirements = styled.div`
 
     strong {
       margin-top: 16px;
-      color: #fff;
+      color: ${props => props.theme.colors.text};
     }
 
     span {
       margin-top: 8px;
-      color: ${shade(0.1, '#efefef')};
+      color: ${props => shade(0.1, props.theme.colors.text)};
     }
   }
 `;
@@ -134,7 +134,7 @@ export const Contact = styled.div`
 
   h3 {
     margin-bottom: 8px;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 
   div {

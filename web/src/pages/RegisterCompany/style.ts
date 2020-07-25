@@ -6,72 +6,72 @@ export const Container = styled.div`
 
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   margin: 60px auto 0 auto;
   padding: 10px;
 
-  h1 {
-    font-size: 48px;
-    color: #444;
+  > a {
+    display: flex;
+    align-items: center;
+    color: ${props => props.theme.colors.text};
+
+    margin: 40px auto 0;
+
+    svg {
+      margin-right: 8px;
+    }
+
+    &:hover {
+      color: ${props => shade(0.2, props.theme.colors.text)};
+    }
+  }
+`;
+
+export const Content = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  > div {
+    border-right: 2px solid
+      ${props =>
+        props.theme.title === 'light'
+          ? 'rgba(0,0,0,0.3)'
+          : 'rgba(255,255,255,0.4)'};
   }
 
-  p {
-    margin-top: 8px;
-    text-align: center;
-    color: ${shade(0.3, '#ccc')};
+  > form {
+    padding: 8px;
+    opacity: 0.6;
+
+    &:hover {
+      opacity: 1;
+      background-color: ${props =>
+        props.theme.title === 'light'
+          ? 'rgba(255,255,255,0.3)'
+          : 'rgba(0,0,0,0.1)'};
+      border-radius: 10px;
+    }
   }
 `;
 
 export const Form = styled.form`
-  margin-top: 60px;
   display: flex;
   align-items: center;
   flex-direction: column;
 
-  input {
-    width: 450px;
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    & + input {
-      margin-top: 8px;
-    }
-
-    ::placeholder {
-      color: ${shade(0.2, '#ccc')};
-    }
+  h1 {
+    font-size: 48px;
+    color: ${props => props.theme.colors.text};
   }
 
-  select {
-    margin-top: 10px;
-    width: 450px;
-    padding: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
-
-    font-size: 16px;
-
-    color: #444;
-
-    option {
-      font-size: 20px;
-    }
-  }
-
-  div {
-    input {
-      width: 230px;
-      & + input {
-        margin-left: 10px;
-        width: 60px;
-      }
-    }
+  p {
+    margin: 8px 0 16px;
+    text-align: center;
+    color: ${props => shade(0.3, props.theme.colors.text)};
   }
 
   button {
-    margin-top: 20px;
     width: 450px;
+    margin-top: 20px;
   }
 `;

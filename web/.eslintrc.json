@@ -35,6 +35,7 @@
       "react/prop-types": "off",
       "class-methods-use-this": "off",
       "@typescript-eslint/camelcase": "off",
+      "no-unused-expressions": "off",
       "react-hooks/rules-of-hooks": "error",
       "react-hooks/exhaustive-deps": "warn",
       "react/jsx-filename-extension": [1, {"extensions": [".tsx"]}],

@@ -24,6 +24,7 @@
   ],
   "rules": {
       "prettier/prettier": "error",
+      "@typescript-eslint/explicit-module-boundary-types": "off",
       "class-methods-use-this": "off",
       "@typescript-eslint/camelcase": "off",
       "import/extensions": [

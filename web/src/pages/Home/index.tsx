@@ -2,6 +2,8 @@ import React from 'react';
 import { Link, useHistory } from 'react-router-dom';
 import { FiLogIn } from 'react-icons/fi';
 
+import logo from '../../assets/logo.png';
+
 import { Container, Background, Content } from './style';
 import Button from '../../components/Button';
 
@@ -15,7 +17,7 @@ const Home: React.FC = () => {
   return (
     <Container>
       <Content>
-        <h1>Job Finder</h1>
+        <img src={logo} alt="Job Finder" />
         <p>Encontre as melhores vagas para desenvolvedores.</p>
         <div>
           <Button type="button" onClick={handleListTODO}>

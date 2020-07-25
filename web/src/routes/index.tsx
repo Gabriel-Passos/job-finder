@@ -14,7 +14,7 @@ const Routes: React.FC = () => {
       <Route path="/company" component={Company} />
       <Route path="/register" component={RegisterCompany} />
       <Route path="/dashboard" component={Dashboard} />
-      <Route path="/job-details" component={JobDetails} />
+      <Route path="/job-details/:id" component={JobDetails} />
     </Switch>
   );
 };

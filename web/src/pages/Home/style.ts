@@ -21,13 +21,16 @@ export const Content = styled.div`
   margin: auto 0;
   padding-left: 60px;
 
-  h1 {
-    font-size: 48px;
-    color: #444;
+  img {
+    max-width: 250px;
+    height: auto;
+    background-color: ${props => props.theme.colors.background};
+    padding: 8px;
   }
 
   p {
-    color: ${shade(0.3, '#ccc')};
+    margin-top: 8px;
+    color: ${props => shade(0.3, props.theme.colors.text)};
   }
 
   div {
@@ -40,11 +43,11 @@ export const Content = styled.div`
       margin-top: 20px;
       display: flex;
       align-items: center;
-      color: #444;
+      color: ${props => props.theme.colors.text};
       font-size: 18px;
 
       &:hover {
-        color: #3c4f77;
+        color: ${props => shade(0.3, props.theme.colors.text)};
       }
 
       svg {

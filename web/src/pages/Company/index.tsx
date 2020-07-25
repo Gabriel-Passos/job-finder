@@ -4,7 +4,7 @@ import { useHistory } from 'react-router-dom';
 
 import { Container, Header, Form } from './style';
 
-import api from '../../services/api';
+// import api from '../../services/api';
 
 const Company: React.FC = () => {
   const [title, setTitle] = useState('');
@@ -58,7 +58,7 @@ const Company: React.FC = () => {
           onChange={event => setEmail(event.target.value)}
         />
         <span>Para contato *</span>
-        <select name="techs">
+        {/* <select name="techs">
           <input
             type="text"
             placeholder="Informe as tecnologias requisitadas"
@@ -67,7 +67,7 @@ const Company: React.FC = () => {
         <select name="salary">
           <option value="combinar">À combinar</option>
           <input type="text" placeholder="Informe o salário" />
-        </select>
+        </select> */}
         <input
           type="text"
           placeholder="Cidade / UF"

@@ -1,8 +1,14 @@
 import React, { useState, FormEvent } from 'react';
 import { useHistory } from 'react-router-dom';
 
-import { Container, Form } from './style';
+import { Container, Content, Form } from './style';
+
 import Button from '../../components/Button';
+import Input from '../../components/Input';
+import Select from '../../components/Select';
+import Login from '../../components/Login';
+import Header from '../../components/Header';
+import Footer from '../../components/Footer';
 
 import api from '../../services/api';
 
@@ -18,60 +24,79 @@ const RegisterCompany: React.FC = () => {
   async function handleCompany(event: FormEvent): Promise<void> {
     event.preventDefault();
 
+    const data = {
+      name,
+      cnpj,
+      email,
+      password,
+      companySize,
+    };
+
     try {
-      await api.post('/companies', {
-        name,
-        cnpj,
-        email,
-        password,
-        companySize,
-      });
+      await api.post('/companies', data);
+
       history.push('/company');
     } catch (err) {
       alert(`${err}`);
     }
   }
   return (
-    <Container>
-      <h1>Cadastro</h1>
-      <p>Registre sua empresa para poder divulgar suas vagas de emprego.</p>
-      <Form onSubmit={handleCompany}>
-        <input
-          type="text"
-          placeholder="Nome"
-          value={name}
-          onChange={event => setName(event.target.value)}
-        />
-        <input
-          type="text"
-          placeholder="CNPJ"
-          value={cnpj}
-          onChange={event => setCNPJ(event.target.value)}
-        />
-        <input
-          type="email"
-          placeholder="E-mail"
-          value={email}
-          onChange={event => setEmail(event.target.value)}
-        />
-        <input
-          type="password"
-          placeholder="Senha"
-          value={password}
-          onChange={event => setPassword(event.target.value)}
-        />
-        <select
-          name="company-size"
-          onChange={event => setcompanySize(event.target.value)}
-        >
-          <option value="startup">Startup</option>
-          <option value="small-medium-company">Pequena ou Média empresa</option>
-          <option value="big-company">Grande empresa</option>
-          <option value="multinational">Multinacional</option>
-        </select>
-        <Button type="submit">Cadastrar</Button>
-      </Form>
-    </Container>
+    <>
+      <Header />
+      <Container>
+        <Content>
+          <Login />
+          <div />
+          <Form onSubmit={handleCompany}>
+            <h1>Cadastro</h1>
+            <p>
+              Registre sua empresa para poder divulgar suas vagas de emprego.
+            </p>
+            <Input
+              placeholder="Nome"
+              value={name}
+              onChange={event => setName(event.target.value)}
+            >
+              Nome
+            </Input>
+            <Input
+              placeholder="CNPJ"
+              value={cnpj}
+              onChange={event => setCNPJ(event.target.value)}
+            >
+              CNPJ
+            </Input>
+            <Input
+              type="email"
+              placeholder="E-mail"
+              value={email}
+              onChange={event => setEmail(event.target.value)}
+            >
+              E-mail
+            </Input>
+            <Input
+              type="password"
+              placeholder="Senha"
+              value={password}
+              onChange={event => setPassword(event.target.value)}
+            >
+              Senha
+            </Input>
+            <Select
+              name="companiSize"
+              title="Tamanho da empresa"
+              onChange={event => setcompanySize(event.target.value)}
+            >
+              <option value="startup">Startup</option>
+              <option value="grande-empresa">Grande empresa</option>
+              <option value="multinacional">Multinacional</option>
+            </Select>
+            <Button type="submit">Cadastrar</Button>
+          </Form>
+        </Content>
+      </Container>
+      <Footer />
+    </>
   );
 };
 

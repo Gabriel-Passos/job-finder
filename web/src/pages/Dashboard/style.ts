@@ -8,12 +8,12 @@ export const Container = styled.div`
   flex-direction: column;
   align-items: center;
 
-  margin: 60px auto 0 auto;
+  margin: 60px auto 100px auto;
   padding: 20px;
 
   h1 {
     font-size: 48px;
-    color: #fff;
+    color: ${props => props.theme.colors.text};
   }
 `;
 
@@ -23,12 +23,12 @@ export const Form = styled.form`
 
   div {
     padding: 16px;
-    background-color: #3c4f77;
-    border: 1px solid #3c4f77;
+    background-color: ${props => props.theme.colors.primary};
+    border: 1px solid ${props => props.theme.colors.primary};
   }
 
   svg {
-    color: #fff;
+    color: ${props => props.theme.colors.buttonText};
   }
 
   select {
@@ -47,14 +47,20 @@ export const Content = styled.div`
 
   display: flex;
   justify-content: center;
-  flex-wrap: wrap;
 
   width: 100%;
   max-width: 960px;
+
+  > div {
+    display: flex;
+    flex-wrap: wrap;
+
+    margin-left: 24px;
+  }
 `;
 
-export const Filter = styled.div`
-  width: 240px;
+export const Filter = styled.aside`
+  width: 320px;
   display: flex;
   flex-direction: column;
 
@@ -65,97 +71,25 @@ export const Filter = styled.div`
     justify-content: space-between;
 
     h2 {
-      color: #fff;
+      color: ${props => props.theme.colors.text};
       margin-bottom: 15px;
     }
 
     button {
       padding: 4px;
-      border: 1px solid ${shade(0.1, '#efefef')};
+      border: 0;
       border-radius: 5px;
-      color: #444;
-      background-color: ${shade(0.1, '#efefef')};
+      color: ${props => props.theme.colors.buttonText};
+      font-weight: 500;
+      background-color: ${props => props.theme.colors.primary};
 
       & + button {
         margin-top: 5px;
       }
 
       &:hover {
-        background-color: ${shade(0.3, '#efefef')};
+        background-color: ${props => shade(0.2, props.theme.colors.primary)};
       }
-    }
-  }
-`;
-
-export const Jobs = styled.div`
-  width: 700px;
-  margin-left: 20px;
-
-  transform: translateX(10px);
-
-  a {
-    margin: 5px 0 10px 0;
-
-    display: flex;
-    flex-direction: column;
-
-    padding: 25px;
-    background-color: ${shade(0.1, '#efefef')};
-    color: #3c4f77;
-    border: 0;
-    border-radius: 5px;
-
-    transition: transform 0.2s;
-
-    div {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      margin-bottom: 20px;
-    }
-
-    p {
-      font-weight: 300;
-    }
-
-    &:hover {
-      transform: translateX(8px);
-    }
-  }
-`;
-
-export const JobDetails = styled.div`
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  p {
-    display: flex;
-    align-items: center;
-
-    svg {
-      margin-right: 5px;
-    }
-  }
-`;
-
-export const Techs = styled.div`
-  margin-top: 10px;
-
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-
-  p {
-    display: flex;
-    align-items: center;
-    padding: 8px;
-    border: 0;
-    border-radius: 10px;
-    background-color: ${shade(0.3, '#efefef')};
-
-    svg {
-      margin-right: 5px;
     }
   }
 `;
