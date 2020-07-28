@@ -73,7 +73,7 @@ Você encontrará sua aplicação rodando em: http://localhost:3000
 - [ReactJS](https://reactjs.org/docs/)
 - [TypeScript](https://www.typescriptlang.org/docs/home.html)
 - [Styled-Components](https://styled-components.com/docs)
-- [React-router-dom](https://reacttraining.com/react-router/web/guides/quick-start)
+- [React-Router-DOM](https://reacttraining.com/react-router/web/guides/quick-start)
 - [Eslint](https://eslint.org/docs/user-guide/getting-started)
 - [Prettier](https://prettier.io/docs/en/index.html)
 
