@@ -2,9 +2,7 @@
   <img height="120px" src="https://user-images.githubusercontent.com/43184223/88624248-04e7a200-d07d-11ea-9a08-9fc8f0b6eaca.png">
 </h1>
 
-<p align="center">
-  > Ainda em desenvolvimento
-</p>
+> Ainda em desenvolvimento
 
 <p align="center">
   <a href="https://reactjs.org/"><img src="https://img.shields.io/static/v1?label=react&message=16.13.1&color=blue&style=for-the-badge&logo=REACT"/><a/>
