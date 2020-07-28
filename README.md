@@ -10,7 +10,7 @@
   <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=prettier&message=2.0.5&color=blue&style=for-the-badge&logo=PRETTIER"/></a>
 </p>
   
-> Ainda em desenvolvimento
+> Em desenvolvimento.
 
 ### Tópicos 
 
