@@ -2,8 +2,6 @@
   <img height="120px" src="https://user-images.githubusercontent.com/43184223/88624248-04e7a200-d07d-11ea-9a08-9fc8f0b6eaca.png">
 </h1>
 
-> Ainda em desenvolvimento
-
 <p align="center">
   <a href="https://reactjs.org/"><img src="https://img.shields.io/static/v1?label=react&message=16.13.1&color=blue&style=for-the-badge&logo=REACT"/><a/>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/static/v1?label=typescript&message=3.7.2&color=blue&style=for-the-badge&logo=TYPESCRIPT"/></a>
@@ -11,6 +9,8 @@
   <a href="https://eslint.org/"><img src="https://img.shields.io/static/v1?label=eslint&message=6.6.0&color=blue&style=for-the-badge&logo=ESLINT"/></a>
   <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=prettier&message=2.0.5&color=blue&style=for-the-badge&logo=PRETTIER"/></a>
 </p>
+  
+> Ainda em desenvolvimento
 
 ### Tópicos 
 
