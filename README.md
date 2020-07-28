@@ -3,6 +3,10 @@
 </h1>
 
 <p align="center">
+  > Ainda em desenvolvimento
+</p>
+
+<p align="center">
   <a href="https://reactjs.org/"><img src="https://img.shields.io/static/v1?label=react&message=16.13.1&color=blue&style=for-the-badge&logo=REACT"/><a/>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/static/v1?label=typescript&message=3.7.2&color=blue&style=for-the-badge&logo=TYPESCRIPT"/></a>
   <a href="https://styled-components.com/"><img src="https://img.shields.io/static/v1?label=styled-components&message=5.1.1&color=blue&style=for-the-badge&logo=STYLED-COMPONENTS"/></a>
