@@ -12,18 +12,6 @@ const Footer: React.FC = () => {
         <NavLink to="/">
           <img src={logo} alt="Job Finder" />
         </NavLink>
-
-        <div>
-          <NavLink exact to="/dashboard" activeClassName="active">
-            Ver vagas
-          </NavLink>
-          {/* <NavLink exact to="/dashboard" activeClassName="active">
-            Sou candidato
-          </NavLink> */}
-          <NavLink exact to="/register" activeClassName="active">
-            Sou empresa
-          </NavLink>
-        </div>
       </Content>
     </Container>
   );

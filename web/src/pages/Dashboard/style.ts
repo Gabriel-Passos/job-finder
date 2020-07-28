@@ -49,9 +49,9 @@ export const Content = styled.div`
   justify-content: center;
 
   width: 100%;
-  max-width: 960px;
 
   > div {
+    width: 1080px;
     display: flex;
     flex-wrap: wrap;
 
@@ -60,7 +60,7 @@ export const Content = styled.div`
 `;
 
 export const Filter = styled.aside`
-  width: 320px;
+  width: 240px;
   display: flex;
   flex-direction: column;
 

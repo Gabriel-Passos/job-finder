@@ -9,22 +9,6 @@ export const Container = styled.div`
 
   margin: 60px auto 0 auto;
   padding: 10px;
-
-  > a {
-    display: flex;
-    align-items: center;
-    color: ${props => props.theme.colors.text};
-
-    margin: 40px auto 0;
-
-    svg {
-      margin-right: 8px;
-    }
-
-    &:hover {
-      color: ${props => shade(0.2, props.theme.colors.text)};
-    }
-  }
 `;
 
 export const Content = styled.div`
@@ -41,15 +25,15 @@ export const Content = styled.div`
 
   > form {
     padding: 8px;
-    opacity: 0.6;
+    opacity: 0.7;
 
     &:hover {
       opacity: 1;
-      background-color: ${props =>
-        props.theme.title === 'light'
-          ? 'rgba(255,255,255,0.3)'
-          : 'rgba(0,0,0,0.1)'};
-      border-radius: 10px;
+      background-color: transparent;
+    }
+
+    &:focus-within {
+      opacity: 1;
     }
   }
 `;
