@@ -6,7 +6,7 @@
   <a href="https://expressjs.com/"><img src="https://img.shields.io/static/v1?label=express&message=4.17.1&color=blue&style=for-the-badge"/><a/>
   <a href="https://reactjs.org/"><img src="https://img.shields.io/static/v1?label=react&message=16.13.1&color=blue&style=for-the-badge"/><a/>
   <a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/static/v1?label=typescript&message=3.7.2&color=blue&style=for-the-badge"/></a>
-  <a href="https://reactrouter.com/"><img src="https://img.shields.io/static/v1?label=react-router-dom&message=16.13.1&color=blue&style=for-the-badge"/><a/>
+  <a href="https://reactrouter.com/"><img src="https://img.shields.io/static/v1?label=react-router-dom&message=5.2.0&color=blue&style=for-the-badge"/><a/>
   <a href="https://styled-components.com/"><img src="https://img.shields.io/static/v1?label=styled-components&message=5.1.1&color=blue&style=for-the-badge"/></a>
   <a href="https://eslint.org/"><img src="https://img.shields.io/static/v1?label=eslint&message=6.6.0&color=blue&style=for-the-badge"/></a>
   <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=prettier&message=2.0.5&color=blue&style=for-the-badge"/></a>
