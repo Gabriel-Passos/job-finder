@@ -54,7 +54,7 @@ ou
 npm install
 ```
 
-- Agora falta pouco para rodar a aplicão, para isso execute: 
+- Agora falta pouco para rodar a aplicacão, para isso execute: 
 
 ```
 yarn start
