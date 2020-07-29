@@ -91,7 +91,13 @@ npm run dev:server
 
 Você encontrará a API rodando em: http://localhost:3333
 
-#### Com a API rodando teste os seguintes endpoints: [/companies](http://localhost:3333/companies) e [/jobs](http://localhost:3333/jobs)
+A seguinte mensagem irá aparecer:
+
+```
+Cannot GET /
+```
+
+#### Portanto com a API rodando teste os seguintes endpoints: [/companies](http://localhost:3333/companies) e [/jobs](http://localhost:3333/jobs)
 
 ## Tecnologias utilizadas
 
