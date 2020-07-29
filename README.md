@@ -12,7 +12,7 @@
   <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=prettier&message=2.0.5&color=blue&style=for-the-badge"/></a>
 </p>
   
-> Em desenvolvimento.
+> Status em Projeto: Em desenvolvimento. :warning:
 
 ### Tópicos 
 
@@ -32,11 +32,12 @@
 
 <p align="justify">
   Job Finder é uma aplicação com ojetivo de oferecer aos usuários um meio de encontrar vagas de emprego na área de tecnologia. No momento somente o front-end web está sendo desenvolvido,
-  na web as empresas poderão se cadastrar e divulgar suas vagas, enquanto os usuários poderão visualizar as vagas em aberto e por fim se cadidatar a elas. 
+  na web as empresas poderão se cadastrar e divulgar suas vagas, enquanto os usuários poderão visualizar as vagas em aberto e por fim se cadidatar a elas.
 </p>
 
-
 ## Como rodar a aplicação :arrow_forward:
+
+### Front-end
 
 Acesse o terminal, e clone o projeto com o seguinte comando: 
 
@@ -44,7 +45,7 @@ Acesse o terminal, e clone o projeto com o seguinte comando:
 git clone https://github.com/Gabriel-Passos/job-finder.git
 ```
 
-- Com o projeto clonado e com o terminal aberto, precisamos instalar as dependências do projeto, portanto execute o seguinte comando:
+- Com o projeto clonado e com o terminal aberto, precisamos instalar as dependências do projeto, portanto entre na pasta web e execute o seguinte comando:
 
 ```
 yarn 
@@ -54,7 +55,7 @@ ou
 npm install
 ```
 
-- Agora falta pouco para rodar a aplicacão, para isso execute: 
+- Agora falta pouco para rodar a aplicacão, ainda com o terminal aberto na pasta web execute: 
 
 ```
 yarn start
@@ -65,6 +66,32 @@ npm start
 ```
 
 Você encontrará sua aplicação rodando em: http://localhost:3000
+
+### Back-end
+
+- Agora devemos rodar o back-end, para isso também precisamos instalar as dependências do projeto, portanto entre na pasta backend e execute o seguinte comando:
+
+```
+yarn 
+
+ou 
+
+npm install
+```
+
+- Agora falta pouco para rodar a aplicacão, ainda com o terminal aberto na pasta backend execute: 
+
+```
+yarn dev:server
+
+ou
+
+npm run dev:server
+```
+
+Você encontrará a API rodando em: http://localhost:3333
+
+#### Com a API rodando teste os seguintes endpoints: [/companies](http://localhost:3333/companies) e [/jobs](http://localhost:3333/jobs)
 
 ## Tecnologias utilizadas
 
