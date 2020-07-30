@@ -31,7 +31,7 @@
 ### O que é Job Finder?
 
 <p align="justify">
-  Job Finder é uma aplicação com objetivo de oferecer aos usuários um meio de encontrar vagas de emprego na área de tecnologia. No momento somente o front-end web está sendo desenvolvido, na web as empresas poderão se cadastrar e divulgar suas vagas, enquanto os usuários poderão visualizar as vagas em aberto e por fim se candidatar a elas.
+  Job Finder é uma aplicação com objetivo de oferecer aos usuários um meio de encontrar vagas de emprego na área de tecnologia. No momento somente o front-end web está sendo desenvolvido, por agora, as empresas poderão se cadastrar, enquanto os usuários poderão visualizar as vagas em aberto e por fim se candidatar a elas.
 </p>
 
 ## Como rodar a aplicação :arrow_forward:
