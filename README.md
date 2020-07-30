@@ -12,7 +12,7 @@
   <a href="https://prettier.io/"><img src="https://img.shields.io/static/v1?label=prettier&message=2.0.5&color=blue&style=for-the-badge"/></a>
 </p>
   
-> Status em Projeto: Em desenvolvimento. :warning:
+> Status do Projeto: Em desenvolvimento. :warning:
 
 ### Tópicos 
 
