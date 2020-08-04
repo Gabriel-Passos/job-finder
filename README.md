@@ -36,36 +36,6 @@
 
 ## Como rodar a aplicação :arrow_forward:
 
-### Front-end
-
-Acesse o terminal, e clone o projeto com o seguinte comando: 
-
-```
-git clone https://github.com/Gabriel-Passos/job-finder.git
-```
-
-- Com o projeto clonado e com o terminal aberto, precisamos instalar as dependências do projeto, portanto entre na pasta web e execute o seguinte comando:
-
-```
-yarn 
-
-ou 
-
-npm install
-```
-
-- Agora falta pouco para rodar a aplicacão, ainda com o terminal aberto na pasta web execute: 
-
-```
-yarn start
-
-ou
-
-npm start
-```
-
-Você encontrará sua aplicação rodando em: http://localhost:3000
-
 ### Back-end
 
 - Agora devemos rodar o back-end, para isso também precisamos instalar as dependências do projeto, portanto entre na pasta backend e execute o seguinte comando:
@@ -95,8 +65,37 @@ A seguinte mensagem irá aparecer:
 ```
 Cannot GET /
 ```
+#### Portanto com a API rodando, teste os seguintes endpoints: [/companies](http://localhost:3333/companies) e [/jobs](http://localhost:3333/jobs)
 
-#### Portanto com a API rodando teste os seguintes endpoints: [/companies](http://localhost:3333/companies) e [/jobs](http://localhost:3333/jobs)
+### Front-end
+
+Acesse o terminal, e clone o projeto com o seguinte comando: 
+
+```
+git clone https://github.com/Gabriel-Passos/job-finder.git
+```
+
+- Com o projeto clonado e com o terminal aberto, precisamos instalar as dependências do projeto, portanto entre na pasta web e execute o seguinte comando:
+
+```
+yarn 
+
+ou 
+
+npm install
+```
+
+- Agora falta pouco para rodar a aplicacão, ainda com o terminal aberto na pasta web execute: 
+
+```
+yarn start
+
+ou
+
+npm start
+```
+
+Você encontrará sua aplicação rodando em: http://localhost:3000
 
 ## Tecnologias utilizadas
 
