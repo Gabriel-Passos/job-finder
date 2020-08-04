@@ -31,14 +31,20 @@
 ### O que é Job Finder?
 
 <p align="justify">
-  Job Finder é uma aplicação com objetivo de oferecer aos usuários um meio de encontrar vagas de emprego na área de tecnologia. No momento somente o front-end web está sendo desenvolvido, por agora, as empresas poderão se cadastrar, enquanto os usuários poderão visualizar as vagas em aberto e por fim se candidatar a elas.
+  Job Finder é uma aplicação com objetivo de oferecer aos usuários um meio de encontrar vagas de emprego na área de tecnologia. A aplicação possuí um API RESTFul própria que está fornecendo todos os dados necessários para o Front-end.
 </p>
 
 ## Como rodar a aplicação :arrow_forward:
 
+Acesse o terminal, e clone o projeto com o seguinte comando: 
+
+```
+git clone https://github.com/Gabriel-Passos/job-finder.git
+```
+
 ### Back-end
 
-- Agora devemos rodar o back-end, para isso também precisamos instalar as dependências do projeto, portanto entre na pasta backend e execute o seguinte comando:
+- Para rodar a API, precisamos instalar as dependências do projeto, portanto entre na pasta backend e execute o seguinte comando no terminal:
 
 ```
 yarn 
@@ -47,8 +53,9 @@ ou
 
 npm install
 ```
+- A pasta `node_modules` irá aparecer após a instalação das dependências.
 
-- Agora falta pouco para rodar a aplicacão, ainda com o terminal aberto na pasta backend execute: 
+- Agora falta pouco para rodar a API, ainda com o terminal aberto na pasta backend execute: 
 
 ```
 yarn dev:server
@@ -69,13 +76,7 @@ Cannot GET /
 
 ### Front-end
 
-Acesse o terminal, e clone o projeto com o seguinte comando: 
-
-```
-git clone https://github.com/Gabriel-Passos/job-finder.git
-```
-
-- Com o projeto clonado e com o terminal aberto, precisamos instalar as dependências do projeto, portanto entre na pasta web e execute o seguinte comando:
+- Com o projeto clonado, precisamos instalar as dependências, portanto entre na pasta web e execute o seguinte comando no terminal:
 
 ```
 yarn 
