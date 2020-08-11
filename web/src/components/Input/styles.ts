@@ -7,10 +7,10 @@ export const Container = styled.div`
   flex-direction: column;
 
   label {
-    color: #f0f0f9;
+    color: ${props => props.theme.colors.text};
     font-size: 18px;
     font-weight: 500;
-    margin-bottom: 4px;
+    margin-bottom: 6px;
   }
 
   input {
@@ -21,6 +21,10 @@ export const Container = styled.div`
 
     ::placeholder {
       color: ${shade(0.2, '#ccc')};
+    }
+
+    &:focus-within {
+      border: 1px solid ${props => props.theme.colors.primary};
     }
   }
 `;

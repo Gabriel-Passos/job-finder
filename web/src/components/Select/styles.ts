@@ -6,11 +6,11 @@ export const Container = styled.div`
   display: flex;
   flex-direction: column;
 
-  label{
-    margin-bottom: 4px;
-    color: #f0f0f9;
+  label {
+    color: ${props => props.theme.colors.text};
     font-size: 18px;
     font-weight: 500;
+    margin-bottom: 6px;
   }
 
   select {
@@ -25,6 +25,10 @@ export const Container = styled.div`
 
     ::placeholder {
       color: ${shade(0.2, '#ccc')};
+    }
+
+    &:focus-within {
+      border: 1px solid ${props => props.theme.colors.primary};
     }
 
     option {

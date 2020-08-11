@@ -77,6 +77,8 @@ export const Form = styled.form`
     ::placeholder {
       color: ${shade(0.2, '#ccc')};
     }
+
+    resize: vertical;
   }
 
   span {

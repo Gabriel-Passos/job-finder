@@ -1,12 +1,12 @@
 import styled from 'styled-components';
 import { shade } from 'polished';
 
-export const Container = styled.div`
-  padding: 16px;
+export const Container = styled.header`
   box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 4px 2px;
 `;
 
-export const Content = styled.div`
+export const Content = styled.nav`
+  height: 88px;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -15,13 +15,9 @@ export const Content = styled.div`
   margin: 0 auto;
 
   a {
-    font-weight: 700;
-    font-size: 22px;
-
     img {
       max-width: 150px;
       height: auto;
-      padding: 8px;
     }
   }
 
@@ -29,14 +25,18 @@ export const Content = styled.div`
     display: flex;
     align-items: center;
 
-    a {
-      padding: 8px;
+    > a {
+      height: 30px;
+      padding: 4px;
+
       background-color: transparent;
+
       font-size: 16px;
+      font-weight: 700;
       color: ${props => props.theme.colors.text};
 
       & + a {
-        margin: 0 16px;
+        margin-left: 16px;
       }
 
       &:hover {

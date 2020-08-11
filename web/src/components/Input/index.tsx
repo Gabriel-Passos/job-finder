@@ -2,13 +2,15 @@ import React, { InputHTMLAttributes } from 'react';
 
 import { Container } from './styles';
 
-type InputProps = InputHTMLAttributes<HTMLInputElement>;
+interface InputProps extends InputHTMLAttributes<HTMLInputElement> {
+  label: string;
+}
 
-const Input: React.FC<InputProps> = ({ children, ...rest }) => {
+const Input: React.FC<InputProps> = ({ label, ...rest }) => {
   return (
     <Container>
-      <label>{children}</label>
-      <input {...rest} />
+      <label htmlFor={label}>{label}</label>
+      <input {...rest} id={label} />
     </Container>
   );
 };

@@ -2,10 +2,8 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  width: 100%;
-  max-width: 320px;
+  width: 320px;
   height: 300px;
-  transform: translateX(10px);
 
   background-color: #fff;
   margin: 8px;

@@ -2,38 +2,37 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
 
   display: flex;
   flex-direction: column;
+  justify-content: center;
 
-  margin: 60px auto 0 auto;
+  margin: 60px auto;
   padding: 10px;
+
+  footer {
+    bottom: 0;
+    position: fixed;
+  }
 `;
 
 export const Content = styled.div`
   display: flex;
-  justify-content: space-around;
+  flex-direction: column;
+  align-items: center;
 
-  > div {
-    border-right: 2px solid
-      ${props =>
-        props.theme.title === 'light'
-          ? 'rgba(0,0,0,0.3)'
-          : 'rgba(255,255,255,0.4)'};
-  }
-
-  > form {
+  a {
+    margin-top: 16px;
     padding: 8px;
-    opacity: 0.7;
+
+    border: 1px dashed ${props => props.theme.colors.primary};
+    border-radius: 5px;
+
+    color: ${props => props.theme.colors.primary};
 
     &:hover {
-      opacity: 1;
-      background-color: transparent;
-    }
-
-    &:focus-within {
-      opacity: 1;
+      color: ${props => shade(0.2, props.theme.colors.primary)};
     }
   }
 `;
@@ -51,7 +50,7 @@ export const Form = styled.form`
   p {
     margin: 8px 0 16px;
     text-align: center;
-    color: ${props => shade(0.3, props.theme.colors.text)};
+    color: ${props => shade(0.3, props.theme.colors.subText)};
   }
 
   button {

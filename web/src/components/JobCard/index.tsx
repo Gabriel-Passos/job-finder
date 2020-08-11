@@ -1,55 +1,54 @@
 import React from 'react';
-import { FiDollarSign, FiMapPin } from 'react-icons/fi';
+import { FiDollarSign, FiMapPin, FiChevronRight } from 'react-icons/fi';
 import { FaBuilding, FaChartBar } from 'react-icons/fa';
+import { useHistory } from 'react-router-dom';
+
+import { JobProps } from '../../pages/Dashboard';
+
+import logo from '../../assets/logo.png';
 
 import { Container } from './styles';
 
 interface JobCardProps {
-  title: string;
-  companyLogo: string;
-  companyName: string;
-  companySize: string;
-  salary: string;
-  experienceLevel: string;
-  location: string;
+  job: JobProps;
 }
 
-const JobCard: React.FC<JobCardProps> = ({
-  title,
-  companySize,
-  salary,
-  experienceLevel,
-  location,
-  children,
-  companyLogo,
-  companyName,
-}) => {
+const JobCard: React.FC<JobCardProps> = ({ job }) => {
+  const history = useHistory();
+
+  function navigateToDetail(): void {
+    localStorage.setItem('@Job-Finder:JobID', JSON.stringify(job.id));
+    history.push(`/job-details/${job.id}`);
+  }
+
   return (
     <Container>
       <header>
-        <img src={companyLogo} alt={companyName} />
-        <strong>{companyName}</strong>
+        <img src={logo} alt={job.name} />
+        <strong>{job.name}</strong>
       </header>
       <div>
-        <h2>{title}</h2>
+        <h2>{job.title}</h2>
         <p>
           <FaBuilding size={20} />
-          {companySize}
+          {job.companySize}
         </p>
         <p>
           <FiDollarSign size={20} />
-          R${salary}
+          R${job.salary}
         </p>
         <p>
           <FaChartBar size={20} />
-          {experienceLevel}
+          {job.experienceLevel}
         </p>
         <p>
           <FiMapPin size={20} />
-          {location}
+          {job.location}
         </p>
       </div>
-      {children}
+      <button type="button" onClick={navigateToDetail}>
+        Ver mais detalhes <FiChevronRight size={20} />
+      </button>
     </Container>
   );
 };

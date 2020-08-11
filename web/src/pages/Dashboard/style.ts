@@ -2,14 +2,15 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  height: 100vh;
+  height: 100%;
+
+  max-width: 1100px;
 
   display: flex;
   flex-direction: column;
   align-items: center;
 
-  margin: 60px auto 100px auto;
-  padding: 20px;
+  margin: 60px auto;
 
   h1 {
     font-size: 48px;
@@ -41,38 +42,36 @@ export const Form = styled.form`
   }
 `;
 
-export const Content = styled.div`
-  margin-top: 70px;
-  margin-bottom: 50px;
+export const Content = styled.main`
+  margin-top: 80px;
+  display: grid;
+  grid-template-columns: 240px 180px 680px;
+  grid-template-areas: 'filters separator cards';
 
-  display: flex;
-  justify-content: center;
+  .separator {
+    grid-area: separator;
+  }
 
-  width: 100%;
-
-  > div {
-    width: 1080px;
+  .job-cards {
+    grid-area: cards;
     display: flex;
     flex-wrap: wrap;
-
-    margin-left: 24px;
   }
 `;
 
 export const Filter = styled.aside`
+  grid-area: filters;
   width: 240px;
-  display: flex;
-  flex-direction: column;
 
   div {
-    margin-bottom: 15px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     h2 {
       color: ${props => props.theme.colors.text};
-      margin-bottom: 15px;
+      font-size: 24px;
+      margin: 12px 0;
     }
 
     button {
@@ -84,7 +83,7 @@ export const Filter = styled.aside`
       background-color: ${props => props.theme.colors.primary};
 
       & + button {
-        margin-top: 5px;
+        margin-top: 4px;
       }
 
       &:hover {

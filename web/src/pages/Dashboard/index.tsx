@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { useHistory } from 'react-router-dom';
-import { FiSearch, FiChevronRight } from 'react-icons/fi';
+import { FiSearch } from 'react-icons/fi';
 
 import { Container, Form, Content, Filter } from './style';
 
@@ -8,11 +7,9 @@ import JobCard from '../../components/JobCard';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
-import logo from '../../assets/logo.png';
-
 import api from '../../services/api';
 
-interface JobProps {
+export interface JobProps {
   id: number;
   title: string;
   name: string;
@@ -24,13 +21,7 @@ interface JobProps {
 }
 
 const Dashboard: React.FC = () => {
-  const history = useHistory();
   const [jobs, setJobs] = useState<JobProps[]>([]);
-
-  function navigateToDetail(job: JobProps): void {
-    localStorage.setItem('@Job-Finder:JobID', JSON.stringify(job.id));
-    history.push(`/job-details/${job.id}`);
-  }
 
   useEffect(() => {
     localStorage.removeItem('@Job-Finder:JobID');
@@ -79,22 +70,10 @@ const Dashboard: React.FC = () => {
               <button type="button">Multinacional</button>
             </div>
           </Filter>
-          <div>
+          <div className="separator" />
+          <div className="job-cards">
             {jobs.map(job => (
-              <JobCard
-                key={job.id}
-                title={job.title}
-                companySize={job.companySize}
-                salary={job.salary}
-                experienceLevel={job.experienceLevel}
-                location={job.location}
-                companyLogo={logo}
-                companyName={job.name}
-              >
-                <button type="button" onClick={() => navigateToDetail(job)}>
-                  Ver mais detalhes <FiChevronRight size={20} />
-                </button>
-              </JobCard>
+              <JobCard key={job.id} job={job} />
             ))}
           </div>
         </Content>

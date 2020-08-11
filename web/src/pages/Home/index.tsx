@@ -23,7 +23,7 @@ const Home: React.FC = () => {
           <Button type="button" onClick={handleListTODO}>
             Ver vagas
           </Button>
-          <Link to="/register">
+          <Link to="/signup">
             Divulgar vaga
             <FiLogIn size={20} />
           </Link>

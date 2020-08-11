@@ -1,18 +1,17 @@
 import React, { useState, FormEvent } from 'react';
-import { useHistory } from 'react-router-dom';
+import { useHistory, Link } from 'react-router-dom';
 
 import { Container, Content, Form } from './style';
 
 import Button from '../../components/Button';
 import Input from '../../components/Input';
 import Select from '../../components/Select';
-import Login from '../../components/Login';
 import Header from '../../components/Header';
 import Footer from '../../components/Footer';
 
 import api from '../../services/api';
 
-const RegisterCompany: React.FC = () => {
+const SignUp: React.FC = () => {
   const [name, setName] = useState('');
   const [cnpj, setCNPJ] = useState('');
   const [email, setEmail] = useState('');
@@ -35,7 +34,7 @@ const RegisterCompany: React.FC = () => {
     try {
       await api.post('/companies', data);
 
-      history.push('/company');
+      history.push('/signup');
     } catch (err) {
       alert(`${err}`);
     }
@@ -45,44 +44,35 @@ const RegisterCompany: React.FC = () => {
       <Header />
       <Container>
         <Content>
-          <Login />
-          <div />
           <Form onSubmit={handleCompany}>
             <h1>Cadastro</h1>
             <p>
               Registre sua empresa para poder divulgar suas vagas de emprego.
             </p>
             <Input
-              placeholder="Nome"
+              label="Nome completo"
               value={name}
               onChange={event => setName(event.target.value)}
-            >
-              Nome
-            </Input>
+            />
             <Input
-              placeholder="CNPJ"
+              label="CNPJ"
               value={cnpj}
               onChange={event => setCNPJ(event.target.value)}
-            >
-              CNPJ
-            </Input>
+            />
             <Input
+              label="E-mail"
               type="email"
-              placeholder="E-mail"
               value={email}
               onChange={event => setEmail(event.target.value)}
-            >
-              E-mail
-            </Input>
+            />
             <Input
+              label="Senha"
               type="password"
-              placeholder="Senha"
               value={password}
               onChange={event => setPassword(event.target.value)}
-            >
-              Senha
-            </Input>
+            />
             <Select
+              label="Tamanho da empresa"
               name="companiSize"
               title="Tamanho da empresa"
               onChange={event => setcompanySize(event.target.value)}
@@ -93,6 +83,7 @@ const RegisterCompany: React.FC = () => {
             </Select>
             <Button type="submit">Cadastrar</Button>
           </Form>
+          <Link to="/signin">Já possuí uma conta?</Link>
         </Content>
       </Container>
       <Footer />
@@ -100,4 +91,4 @@ const RegisterCompany: React.FC = () => {
   );
 };
 
-export default RegisterCompany;
+export default SignUp;

@@ -1,5 +1,5 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
+import { shade, lighten } from 'polished';
 
 export const Container = styled.div`
   width: 100%;
@@ -70,10 +70,10 @@ export const Details = styled.div`
 export const Description = styled.div`
   margin-top: 16px;
 
-  background-color: ${props => shade(0.2, props.theme.colors.background)};
+  background-color: ${props => lighten(0.2, props.theme.colors.subText)};
   padding: 8px;
 
-  border: 0;
+  border: 2px dashed ${props => props.theme.colors.subText};
   border-radius: 5px;
 
   h3 {
