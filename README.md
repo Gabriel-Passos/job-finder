@@ -112,10 +112,11 @@ Você encontrará sua aplicação rodando em: http://localhost:3000
 ## Telas do projeto 
 
 <p align="center"> 
-  <img src="https://user-images.githubusercontent.com/43184223/88625565-63158480-d07f-11ea-8e81-dfbdc51d4d44.png">
-  <img src="https://user-images.githubusercontent.com/43184223/88625590-71fc3700-d07f-11ea-92cd-649af4b56f58.png">
-  <img src="https://user-images.githubusercontent.com/43184223/88625625-817b8000-d07f-11ea-80c9-e5c76923b253.png">
-  <img src="https://user-images.githubusercontent.com/43184223/88625656-8f310580-d07f-11ea-9d82-928a38e05454.png">
+  <img src="https://user-images.githubusercontent.com/43184223/88625565-63158480-d07f-11ea-8e81-dfbdc51d4d44.png" />
+  <img src="https://user-images.githubusercontent.com/43184223/89934049-63b52b80-dbe6-11ea-9bd9-a88d5a8222ee.png" />
+  <img src="https://user-images.githubusercontent.com/43184223/89934165-8e06e900-dbe6-11ea-807b-0779588cf143.png" />
+  <img src="https://user-images.githubusercontent.com/43184223/89934217-a0812280-dbe6-11ea-8cc2-fb0c1ffe0b4f.png" />
+  <img src="https://user-images.githubusercontent.com/43184223/89934245-a971f400-dbe6-11ea-8f7d-d9f38dca6bed.png" />
 </p>
 
 ## Desenvolvedores :octocat:
