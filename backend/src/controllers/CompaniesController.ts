@@ -2,9 +2,8 @@ import { uuid } from 'uuidv4';
 
 import knex from '../database/connection';
 
-interface Company {
-  name: string;
-  cnpj: string;
+export interface Company {
+  companyName: string;
   email: string;
   password: string;
   companySize: string;
@@ -12,28 +11,20 @@ interface Company {
 
 class CompaniesController {
   public async index(): Promise<Company[]> {
-    const companies = await knex('companies').select(
-      'id',
-      'name',
-      'cnpj',
-      'email',
-      'companySize',
-    );
+    const companies = await knex('companies').select('*');
 
     return companies;
   }
 
   public async create({
-    name,
-    cnpj,
+    companyName,
     email,
     password,
     companySize,
   }: Company): Promise<Company> {
     const company = {
       id: uuid(),
-      name,
-      cnpj,
+      companyName,
       email,
       password,
       companySize,

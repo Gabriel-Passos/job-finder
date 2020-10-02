@@ -1,5 +1,4 @@
 import styled from 'styled-components';
-import { shade } from 'polished';
 
 export const Container = styled.div`
   margin-top: 8px;
@@ -18,10 +17,6 @@ export const Container = styled.div`
     padding: 16px;
     border: 1px solid #ccc;
     border-radius: 5px;
-
-    ::placeholder {
-      color: ${shade(0.2, '#ccc')};
-    }
 
     &:focus-within {
       border: 1px solid ${props => props.theme.colors.primary};

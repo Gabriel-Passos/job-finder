@@ -19,33 +19,38 @@ jobsRouter.get('/', async (request, response) => {
   response.json(cards);
 });
 
+jobsRouter.get('/:id', JobsControllerRouter.show);
+
 jobsRouter.post('/', async (request, response) => {
   try {
     const {
       title,
-      description,
-      experienceLevel,
-      contract,
-      email,
-      techs,
       salary,
-      location,
+      description,
+      curriculumEmail,
+      contactEmail,
+      city,
+      uf,
+      expTypes,
+      contractTypes,
     } = request.body;
-    const companyID = request.headers.authorization;
 
-    const card = await JobsControllerRouter.create({
+    const company_id = request.headers.authorization;
+
+    const job = await JobsControllerRouter.create({
       title,
       description,
-      companyID,
-      experienceLevel,
-      contract,
-      email,
-      techs,
+      curriculumEmail,
+      contactEmail,
       salary,
-      location,
+      city,
+      uf,
+      expTypes,
+      contractTypes,
+      company_id,
     });
 
-    return response.json(card);
+    return response.json(job);
   } catch (err) {
     return response.status(400).json({ error: err.message });
   }

@@ -1,16 +1,18 @@
+import { Request, Response } from 'express';
 import knex from '../database/connection';
 
 interface Jobs {
   title: string;
   description: string;
-  experienceLevel: string;
-  contract: string;
-  email: string;
-  techs: [string];
-  salary: string;
-  location: string;
+  curriculumEmail: string;
+  contactEmail: string;
+  salary: number;
+  city: string;
+  uf: string;
+  expTypes: number;
+  contractTypes: number;
 
-  companyID?: string;
+  company_id?: string;
 }
 
 interface Page {
@@ -19,14 +21,13 @@ interface Page {
 
 class JobsController {
   public async index({ page }: Page): Promise<Jobs[]> {
-    const jobs = await knex('jobDetails')
-      .join('companies', 'companies.id', '=', 'jobDetails.companyID')
+    const jobs = await knex('jobs')
+      .join('companies', 'companies.id', '=', 'jobs.company_id')
       .limit(5)
       .offset((page - 1) * 5)
       .select([
-        'jobDetails.*',
-        'companies.name',
-        'companies.cnpj',
+        'jobs.*',
+        'companies.companyName',
         'companies.email',
         'companies.companySize',
       ]);
@@ -34,32 +35,61 @@ class JobsController {
     return jobs;
   }
 
+  public async show(request: Request, response: Response) {
+    const { id } = request.params;
+
+    const jobs = await knex('jobDetails')
+      .join('companies', 'companies.id', '=', 'jobDetails.companyID')
+      .select(
+        'jobDetails.id',
+        'jobDetails.title',
+        'jobDetails.description',
+        'jobDetails.experienceLevel',
+        'jobDetails.contract',
+        'jobDetails.curriculumEmail',
+        'jobDetails.contactEmail',
+        'jobDetails.salary',
+        'jobDetails.city',
+        'jobDetails.uf',
+        'companies.name',
+        'companies.email',
+        'companies.companySize',
+      )
+      .where('jobDetails.id', id);
+
+    if (!jobs) {
+      return response.status(400).json({ message: 'Job not found' });
+    }
+
+    return response.json(jobs);
+  }
+
   public async create({
     title,
     description,
-    companyID,
-    experienceLevel,
-    contract,
-    email,
-    techs,
+    curriculumEmail,
+    contactEmail,
     salary,
-    location,
+    city,
+    uf,
+    expTypes,
+    contractTypes,
   }: Jobs): Promise<Jobs> {
-    const jobDetail = {
+    const job = {
       title,
       description,
-      companyID,
-      experienceLevel,
-      contract,
-      email,
-      techs,
+      curriculumEmail,
+      contactEmail,
       salary,
-      location,
+      city,
+      uf,
+      expTypes,
+      contractTypes,
     };
 
-    await knex('jobDetails').insert(jobDetail);
+    await knex('jobs').insert(job);
 
-    return jobDetail;
+    return job;
   }
 }
 

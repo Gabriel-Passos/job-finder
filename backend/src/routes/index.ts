@@ -2,12 +2,12 @@ import express from 'express';
 
 import companiesRouter from './companies.routes';
 import jobsRouter from './jobs.routes';
-import jobDetailsRouter from './jobDetails.routes';
+// import sessionRouter from './session.routes';
 
 const routes = express.Router();
 
 routes.use('/companies', companiesRouter);
 routes.use('/jobs', jobsRouter);
-routes.use('/job-details', jobDetailsRouter);
+// routes.use('/sessions', sessionRouter);
 
 export default routes;

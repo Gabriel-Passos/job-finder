@@ -7,7 +7,7 @@ import logo from '../../assets/logo.png';
 import { Container, Background, Content } from './style';
 import Button from '../../components/Button';
 
-const Home: React.FC = () => {
+const Landing: React.FC = () => {
   const history = useHistory();
 
   async function handleListTODO(): Promise<void> {
@@ -18,12 +18,12 @@ const Home: React.FC = () => {
     <Container>
       <Content>
         <img src={logo} alt="Job Finder" />
-        <p>Encontre as melhores vagas para desenvolvedores.</p>
+        <p>Seu melhor jornal para vagas de emprego na área de tecnologia.</p>
         <div>
           <Button type="button" onClick={handleListTODO}>
             Ver vagas
           </Button>
-          <Link to="/signup">
+          <Link to="/signin">
             Divulgar vaga
             <FiLogIn size={20} />
           </Link>
@@ -34,4 +34,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Landing;

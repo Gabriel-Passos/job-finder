@@ -3,6 +3,7 @@ import { shade } from 'polished';
 
 export const Container = styled.header`
   box-shadow: rgba(0, 0, 0, 0.2) 1px 2px 4px 2px;
+  width: 100%;
 `;
 
 export const Content = styled.nav`

@@ -3,7 +3,7 @@ import React, { SelectHTMLAttributes } from 'react';
 import { Container } from './styles';
 
 interface SelectProps extends SelectHTMLAttributes<HTMLSelectElement> {
-  label: string;
+  label?: string;
 }
 
 const Select: React.FC<SelectProps> = ({ label, children, ...rest }) => {

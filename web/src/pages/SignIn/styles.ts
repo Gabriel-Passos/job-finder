@@ -2,32 +2,21 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  height: 100%;
+  height: 100vh;
 
   display: flex;
   flex-direction: column;
   justify-content: center;
-
-  margin: 60px auto;
-  padding: 10px;
-
-  footer {
-    bottom: 0;
-    position: fixed;
-  }
-`;
-
-export const Content = styled.div`
-  display: flex;
-  flex-direction: column;
   align-items: center;
 
-  a {
+  img {
+    max-width: 250px;
+    height: auto;
+  }
+
+  .link-signup {
     margin-top: 16px;
     padding: 8px;
-
-    border: 1px dashed ${props => props.theme.colors.primary};
-    border-radius: 5px;
 
     color: ${props => props.theme.colors.primary};
 
@@ -39,11 +28,13 @@ export const Content = styled.div`
 
 export const Form = styled.form`
   display: flex;
-  align-items: center;
   flex-direction: column;
+  padding: 20px;
 
   h1 {
-    font-size: 48px;
+    text-align: center;
+    margin-top: 40px;
+    font-size: 36px;
     color: ${props => props.theme.colors.text};
   }
 
@@ -56,5 +47,48 @@ export const Form = styled.form`
   button {
     width: 450px;
     margin-top: 20px;
+  }
+
+  .forgot-password {
+    text-align: start;
+    width: 140px;
+    margin: 8px 4px 0;
+    color: ${props => props.theme.colors.text};
+    font-weight: 700;
+  }
+
+  .external-login {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    margin-top: 24px;
+
+    strong {
+      color: ${props => props.theme.colors.text};
+    }
+
+    button {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      padding: 8px;
+      background: #dc4e41;
+      border: 0;
+      border-radius: 5px;
+
+      color: #fff;
+      font-weight: 700;
+
+      svg {
+        margin-right: 16px;
+      }
+
+      & + button {
+        background: #3b5998;
+        padding: 10px 8px;
+      }
+    }
   }
 `;

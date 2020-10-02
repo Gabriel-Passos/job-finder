@@ -29,8 +29,14 @@ export const Content = styled.div`
   }
 
   p {
-    margin-top: 8px;
-    color: ${props => shade(0.3, props.theme.colors.text)};
+    width: 300px;
+    margin-top: 32px;
+    color: ${props => shade(0.3, props.theme.colors.subText)};
+    font-weight: 500;
+  }
+
+  button {
+    width: 300px;
   }
 
   div {

@@ -20,7 +20,7 @@ const Header: React.FC = () => {
           {/* <NavLink exact to="/dashboard" activeClassName="active">
             Sou candidato
           </NavLink> */}
-          <NavLink exact to="/signup" activeClassName="active">
+          <NavLink exact to="/signin" activeClassName="active">
             Sou empresa
           </NavLink>
         </div>
