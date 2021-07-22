@@ -30,7 +30,7 @@ export const CreateJobsHeader = styled.header`
   h1 {
     margin: 64px 0 32px;
     text-align: center;
-    color: ${props => props.theme.colors.text};
+    color: #202125;
   }
 
   p {
@@ -48,6 +48,7 @@ export const CreateJobsHeader = styled.header`
     font-weight: 500;
     transition: opacity 0.2s;
     border: 0;
+    background: transparent;
 
     svg {
       margin-right: 8px;
@@ -69,6 +70,8 @@ export const Form = styled.form`
   align-items: center;
 
   aside {
+    width: 450px;
+
     & + aside {
       margin-left: 16px;
     }
@@ -90,7 +93,7 @@ export const Form = styled.form`
   span {
     display: block;
     margin: 4px 4px 0;
-    color: ${props => props.theme.colors.subText};
+    color: #a8a8ae;
   }
 
   button {
@@ -108,7 +111,7 @@ export const Form = styled.form`
     flex-direction: column;
 
     p {
-      color: ${props => props.theme.colors.text};
+      color: #202125;
       font-size: 18px;
       font-weight: 500;
       margin-bottom: 6px;
@@ -119,8 +122,8 @@ export const Form = styled.form`
       justify-content: space-between;
 
       .selected {
-        background: ${props => lighten(0.2, props.theme.colors.primary)};
-        color: ${props => shade(0.3, props.theme.colors.primary)};
+        background: ${lighten(0.2, '#0779e4')};
+        color: ${shade(0.3, '#0779e4')};
       }
     }
   }

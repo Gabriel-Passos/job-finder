@@ -34,18 +34,18 @@ export const Content = styled.nav`
 
       font-size: 16px;
       font-weight: 700;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
 
       & + a {
         margin-left: 16px;
       }
 
       &:hover {
-        background-color: ${props => shade(0.1, props.theme.colors.buttonText)};
+        background-color: ${shade(0.1, '#a8a8ae')};
       }
 
       &.active {
-        border-bottom: 4px solid #0779e4;
+        border-bottom: 4px solid var(--color-primary);
       }
     }
   }

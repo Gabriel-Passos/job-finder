@@ -10,14 +10,14 @@ export const Container = styled.section`
       margin: 0;
       width: 120px;
       padding: 16px;
-      color: ${props => props.theme.colors.primary};
+      color: var(--color-primary);
       font-weight: 700;
-      border: 1px dashed ${props => props.theme.colors.primary};
+      border: 1px dashed var(--color-primary);
       border-radius: 5px;
-      background: ${props => lighten(0.4, props.theme.colors.primary)};
+      background: ${lighten(0.4, '#0779e4')};
 
       &:hover {
-        background: ${props => lighten(0.3, props.theme.colors.primary)};
+        background: ${lighten(0.3, '#0779e4')};
       }
     }
   }

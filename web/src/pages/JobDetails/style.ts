@@ -15,14 +15,14 @@ export const Container = styled.div`
   h1 {
     text-align: center;
     font-size: 48px;
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
   }
 
   h2 {
     margin: 60px 0 30px 0;
     text-align: center;
     font-size: 28px;
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
   }
 `;
 
@@ -35,7 +35,7 @@ export const HeaderDetails = styled.header`
     border: 0;
     background-color: transparent;
     svg {
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
     }
   }
 `;
@@ -58,11 +58,11 @@ export const Details = styled.div`
 
     strong {
       margin-right: 10px;
-      color: ${props => shade(0.2, props.theme.colors.text)};
+      color: ${shade(0.2, '#202125')};
     }
 
     p {
-      color: ${props => shade(0.2, props.theme.colors.text)};
+      color: ${shade(0.2, '#202125')};
     }
   }
 `;
@@ -70,18 +70,18 @@ export const Details = styled.div`
 export const Description = styled.div`
   margin-top: 16px;
 
-  background-color: ${props => lighten(0.2, props.theme.colors.subText)};
+  background-color: ${lighten(0.2, '#a8a8ae')};
   padding: 8px;
 
-  border: 2px dashed ${props => props.theme.colors.subText};
+  border: 2px dashed var(--color-subText);
   border-radius: 5px;
 
   h3 {
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
   }
 
   p {
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
     margin-top: 8px;
     text-align: justify;
   }
@@ -91,7 +91,7 @@ export const Requirements = styled.div`
   margin-top: 16px;
 
   h3 {
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
   }
 
   div {
@@ -104,8 +104,8 @@ export const Requirements = styled.div`
       margin-top: 8px;
       text-align: justify;
 
-      background-color: ${props => shade(0.2, props.theme.colors.background)};
-      color: ${props => props.theme.colors.text};
+      background-color: ${shade(0.2, '#eeeeee')};
+      color: var(--color-text);
       padding: 8px;
       border: 0;
       border-radius: 5px;
@@ -119,12 +119,12 @@ export const Requirements = styled.div`
 
     strong {
       margin-top: 16px;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
     }
 
     span {
       margin-top: 8px;
-      color: ${props => shade(0.1, props.theme.colors.text)};
+      color: ${shade(0.1, '#202125')};
     }
   }
 `;
@@ -134,7 +134,7 @@ export const Contact = styled.div`
 
   h3 {
     margin-bottom: 8px;
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
   }
 
   div {

@@ -30,7 +30,7 @@ export const Container = styled.div`
 
     strong {
       font-size: 16px;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
     }
   }
 
@@ -43,7 +43,7 @@ export const Container = styled.div`
     h2 {
       font-size: 24px;
       padding-bottom: 16px;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
     }
 
     p {
@@ -51,7 +51,7 @@ export const Container = styled.div`
       align-items: center;
 
       font-size: 15px;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
 
       padding: 4px 0;
 
@@ -67,14 +67,14 @@ export const Container = styled.div`
     justify-content: space-between;
 
     font-size: 15px;
-    color: ${props => props.theme.colors.primary};
+    color: var(--color-primary);
 
     border: 0;
 
     background-color: transparent;
 
     &:hover {
-      color: ${props => shade(0.3, props.theme.colors.primary)};
+      color: ${shade(0.3, '#0779e4')};
     }
   }
 `;

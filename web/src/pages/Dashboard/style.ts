@@ -14,7 +14,7 @@ export const Container = styled.div`
 
   h1 {
     font-size: 48px;
-    color: ${props => props.theme.colors.text};
+    color: #202125;
   }
 `;
 
@@ -24,12 +24,12 @@ export const Form = styled.form`
 
   div {
     padding: 16px;
-    background-color: ${props => props.theme.colors.primary};
-    border: 1px solid ${props => props.theme.colors.primary};
+    background-color: #0779e4;
+    border: 1px solid #0779e4;
   }
 
   svg {
-    color: ${props => props.theme.colors.buttonText};
+    color: #f0f0f9;
   }
 
   select {
@@ -69,7 +69,7 @@ export const Filter = styled.aside`
     justify-content: space-between;
 
     h2 {
-      color: ${props => props.theme.colors.text};
+      color: #202125;
       font-size: 24px;
       margin: 12px 0;
     }
@@ -78,16 +78,16 @@ export const Filter = styled.aside`
       padding: 4px;
       border: 0;
       border-radius: 5px;
-      color: ${props => props.theme.colors.buttonText};
+      color: #f0f0f9;
       font-weight: 500;
-      background-color: ${props => props.theme.colors.primary};
+      background: #0779e4;
 
       & + button {
         margin-top: 4px;
       }
 
       &:hover {
-        background-color: ${props => shade(0.2, props.theme.colors.primary)};
+        background-color: ${shade(0.2, '#0779e4')};
       }
     }
   }

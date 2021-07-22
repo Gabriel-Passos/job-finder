@@ -2,17 +2,21 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.button`
+  width: 100%;
+  height: 55px;
+
   display: flex;
   align-items: center;
   justify-content: center;
 
-  width: 100%;
   font-weight: 700;
-  padding: 16px;
+  color: #fff;
+
   border: 0;
   border-radius: 5px;
+
   background-color: #0779e4;
-  color: #fff;
+
   transition: background-color 0.2s;
 
   & + button {

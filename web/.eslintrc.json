@@ -29,11 +29,14 @@
       "prettier"
     ],
     "rules": {
+      "no-console": "off",
+      "no-alert": "off",
       "prettier/prettier": "error",
       "react/jsx-one-expression-per-line": "off",
       "react/jsx-props-no-spreading": "off",
       "react/prop-types": "off",
       "class-methods-use-this": "off",
+      "@typescript-eslint/no-empty-function": "off",
       "@typescript-eslint/camelcase": "off",
       "no-unused-expressions": "off",
       "react-hooks/rules-of-hooks": "error",

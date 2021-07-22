@@ -2,93 +2,86 @@ import styled from 'styled-components';
 import { shade } from 'polished';
 
 export const Container = styled.div`
-  height: 100vh;
+  width: 100%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+
+  margin: 60px 0 16px;
+`;
+
+export const Form = styled.form`
+  width: 450px;
+  padding: 0 20px;
 
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   img {
-    max-width: 250px;
+    max-width: 340px;
     height: auto;
+  }
+
+  @media only screen and (max-width: 360px) {
+    img {
+      max-width: 240px;
+      height: auto;
+    }
+  }
+
+  h1 {
+    margin-top: 40px;
+
+    text-align: center;
+    font-size: 36px;
+    color: var(--color-text);
+  }
+
+  p {
+    margin: 8px 0 16px;
+
+    text-align: center;
+    color: ${shade(0.3, '#a8a8ae')};
+  }
+
+  button {
+    margin-top: 20px;
+  }
+
+  .forgot-password {
+    width: 100%;
+    padding-left: 8px;
+    margin: 8px 0;
+
+    text-align: start;
+    color: var(--color-text);
+    font-weight: 700;
+  }
+
+  strong {
+    margin-top: 16px;
+    color: var(--color-text);
+  }
+
+  .btn-google {
+    background: #dc4e41;
+
+    &:hover {
+      background: ${shade(0.2, '#dc4e41')};
+    }
   }
 
   .link-signup {
     margin-top: 16px;
     padding: 8px;
 
-    color: ${props => props.theme.colors.primary};
+    color: #0779e4;
 
     &:hover {
-      color: ${props => shade(0.2, props.theme.colors.primary)};
-    }
-  }
-`;
-
-export const Form = styled.form`
-  display: flex;
-  flex-direction: column;
-  padding: 20px;
-
-  h1 {
-    text-align: center;
-    margin-top: 40px;
-    font-size: 36px;
-    color: ${props => props.theme.colors.text};
-  }
-
-  p {
-    margin: 8px 0 16px;
-    text-align: center;
-    color: ${props => shade(0.3, props.theme.colors.subText)};
-  }
-
-  button {
-    width: 450px;
-    margin-top: 20px;
-  }
-
-  .forgot-password {
-    text-align: start;
-    width: 140px;
-    margin: 8px 4px 0;
-    color: ${props => props.theme.colors.text};
-    font-weight: 700;
-  }
-
-  .external-login {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    margin-top: 24px;
-
-    strong {
-      color: ${props => props.theme.colors.text};
-    }
-
-    button {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-
-      padding: 8px;
-      background: #dc4e41;
-      border: 0;
-      border-radius: 5px;
-
-      color: #fff;
-      font-weight: 700;
-
-      svg {
-        margin-right: 16px;
-      }
-
-      & + button {
-        background: #3b5998;
-        padding: 10px 8px;
-      }
+      color: ${shade(0.2, '#0779e4')};
     }
   }
 `;

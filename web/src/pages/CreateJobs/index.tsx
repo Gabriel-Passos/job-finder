@@ -95,7 +95,8 @@ const CreateJobs: React.FC = () => {
             </p>
 
             <button type="button" onClick={handleBack}>
-              <FiChevronLeft size={20} /> Voltar
+              <FiChevronLeft size={20} />
+              Voltar
             </button>
           </CreateJobsHeader>
           <Form onSubmit={handleSubmit}>

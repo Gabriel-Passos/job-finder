@@ -39,7 +39,7 @@ const Dashboard: React.FC = () => {
           <div>
             <FiSearch size={25} />
           </div>
-          <select name="dev-skills">
+          <select name="dev-skills" defaultValue="0">
             <option value="front-end">Front End</option>
             <option value="back-end">Back End</option>
             <option value="dev-ops">Dev Ops</option>

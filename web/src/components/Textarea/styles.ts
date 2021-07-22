@@ -6,7 +6,7 @@ export const Container = styled.div`
   flex-direction: column;
 
   label {
-    color: ${props => props.theme.colors.text};
+    color: var(--color-text);
     font-size: 18px;
     font-weight: 500;
     margin-bottom: 6px;
@@ -20,7 +20,7 @@ export const Container = styled.div`
     border-radius: 5px;
 
     &:focus-within {
-      border: 1px solid ${props => props.theme.colors.primary};
+      border: 1px solid var(--color-primary);
     }
   }
 `;

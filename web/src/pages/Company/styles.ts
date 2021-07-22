@@ -20,7 +20,7 @@ export const Container = styled.div`
   }
 
   ul li {
-    background: #fff;
+    background: #f0eff4;
     padding: 24px;
     border-radius: 5px;
     position: relative;

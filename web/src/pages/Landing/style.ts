@@ -24,14 +24,14 @@ export const Content = styled.div`
   img {
     max-width: 250px;
     height: auto;
-    background-color: ${props => props.theme.colors.background};
+    background-color: var(--color-background);
     padding: 8px;
   }
 
   p {
     width: 300px;
     margin-top: 32px;
-    color: ${props => shade(0.3, props.theme.colors.subText)};
+    color: ${shade(0.3, '#a8a8ae')};
     font-weight: 500;
   }
 
@@ -49,11 +49,11 @@ export const Content = styled.div`
       margin-top: 20px;
       display: flex;
       align-items: center;
-      color: ${props => props.theme.colors.text};
+      color: var(--color-text);
       font-size: 18px;
 
       &:hover {
-        color: ${props => shade(0.3, props.theme.colors.text)};
+        color: ${shade(0.3, '#202125')};
       }
 
       svg {

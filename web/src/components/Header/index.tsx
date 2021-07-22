@@ -1,30 +1,33 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
+import { FiMenu } from 'react-icons/fi';
 
 import logo from '../../assets/logo.png';
 
-import { Container, Content } from './styles';
+import { Container } from './styles';
 
 const Header: React.FC = () => {
   return (
     <Container>
-      <Content>
-        <NavLink to="/">
-          <img src={logo} alt="Job Finder" />
-        </NavLink>
+      <NavLink to="/">
+        <img src={logo} alt="Job Finder" />
+      </NavLink>
 
-        <div>
-          <NavLink exact to="/dashboard" activeClassName="active">
-            Ver vagas
-          </NavLink>
-          {/* <NavLink exact to="/dashboard" activeClassName="active">
+      <div className="nav-bar">
+        <NavLink exact to="/dashboard" activeClassName="active">
+          Ver vagas
+        </NavLink>
+        {/* <NavLink exact to="/dashboard" activeClassName="active">
             Sou candidato
           </NavLink> */}
-          <NavLink exact to="/signin" activeClassName="active">
-            Sou empresa
-          </NavLink>
-        </div>
-      </Content>
+        <NavLink exact to="/signin" activeClassName="active">
+          Sou empresa
+        </NavLink>
+      </div>
+
+      <button type="button" className="burger-menu">
+        <FiMenu size={30} color="#222222" />
+      </button>
     </Container>
   );
 };
